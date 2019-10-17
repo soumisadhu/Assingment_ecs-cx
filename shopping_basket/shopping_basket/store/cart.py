@@ -1,7 +1,6 @@
 from store.product import ProductStore
 from store.offers import BuyGetOffer
 from store.offers import PercentageDiscountOffer
-from store.offers import Offerlist
 
 productDetail=ProductStore('products.csv')
 
@@ -51,7 +50,6 @@ def main():
 
     a=Cart()
     productDetail.show_available_product()
-    offer = Offerlist.parse_dic()
     flag = 'y'
     while flag !='n':
 
@@ -61,8 +59,9 @@ def main():
         flag=input('Want to enter more items ? y/n: ')
 
     """Here types of offers are hardcoded"""
-    #offer = Offerlist.parse_dic()
-    a.get_total(offers=offer)
+    multibuy_apples = BuyGetOffer('Biscuits', 5, 2)
+    percentdiscount = PercentageDiscountOffer('Baked Beans',0.15)
+    a.get_total(offers=[percentdiscount,multibuy_apples])
 
 
 if __name__=='__main__':
