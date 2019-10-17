@@ -42,26 +42,9 @@ Offer is: Baked Beans 15% Discount
 subtotal:10.566
 
 
-N:B Note that offers are hardcodded in offer.py file.So if you want to change offer change in offer.py and can add more offers.
+N:B Note that offers are hardcodded in cart.py file.So if you want to change offer change in cart.py and run the program.
 i.e
-        offer =\
-        {
-            "discount":
-                [
-                {
-                    "name":"Baked Beans",
-                    "amount":"0.15"
-                },
-                {
-                    "name":"Sardines",
-                    "amount":"0.25"
-                }],
-            "buygetfree":
-                [{
-                    "name":"Biscuits",
-                    "buy":"5",
-                    "get":"2"
-                }]}
+multibuy_apples = BuyGetOffer('Shampoo (Small)', 2, 1)
 
 ---------------------------------------------
 To run unit test.
